@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <title>Welcome to Hzzzng's Site</title>
+    <style>
+        header h1{
+            font-size : xx-large;
+            text-align: center;
+        }
+        a{text-decoration: none;}
+        ul{list-style-type : none}
+        nav ul {
+            text-align: center;
+            border-top:2px solid indigo;
+            border-bottom: 2px solid indigo;
+            padding : 15px 8px;
+        }
+        nav ul li{
+            display:inline;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            padding : 15px 25px;
+        }
+        nav ul li:hover{
+            background-color: indigo;
+        }
+        nav ul a:hover{
+            color:white;
+        }
+        
+    </style>
+</head>
+<body>
+     <header>
+         <h1>♥ Hzzzng Home ♥</h1>
+     </header>
+     <nav>
+         <ul>
+             <li><a href="hzzzng.html">Home</a></li>
+             <li><a href="profile.html">Profile</a></li>
+             <li><a href="portfolio.html">Portfolio</a></li>
+             <li><a href="contact.html">Contact</a></li>
+         </ul>
+     </nav>
+
+     <div id="portfolio" style="text-align: center; font-size: x-large;">Portfolio</div>
+
+     <div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" onclick="openCity('London')">Github</button>
+        <button class="w3-bar-item w3-button" onclick="openCity('Paris')">Deu Door</button>
+        <button class="w3-bar-item w3-button" onclick="openCity('Tokyo')">CV</button>
+      </div>
+      
+      <div id="London" class="w3-container city">
+        <h2>Github</h2>
+        <p>Github link : https://github.com/hzzzng/hzzzng </p>
+      </div>
+      
+      <div id="Paris" class="w3-container city" style="display:none">
+        <h2>Deu Door</h2>
+        <p>Deu Door : http://door.deu.ac.kr/Home/ </p> 
+      </div>
+      
+      <div id="Tokyo" class="w3-container city" style="display:none">
+        <h2>CV</h2>
+        <p>이력서 - 작성중</p>
+      </div>
+      
+      <script>
+      function openCity(cityName) {
+          var i;
+          var x = document.getElementsByClassName("city");
+          for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";  
+            }
+            document.getElementById(cityName).style.display = "block";
+        }
+      </script>
+
+     
+    </body>
