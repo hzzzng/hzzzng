@@ -1,0 +1,208 @@
+*{box-sizing: border-box;}
+div{ display: block};
+#div_block { display: block; }
+
+.Page_title { 
+    background-color: rgb(245, 245, 245); 
+}
+
+hr { margin-top: 0.5rem;}
+
+#Page_wrapper{
+    margin: 2.5rem auto;
+    max-width: 1200px;
+    position: relative;
+    height: 100px;
+}
+
+#Mainpage_wrapper{
+    /* border: 1px solid green; */
+    margin: -1rem auto;
+    max-width: 1200px;
+}
+
+#Varmilo_text{
+    padding-top: 3rem;
+    padding-left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#Main_text{
+    /* animation-name: rgb;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; */
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+@keyframes rgb {
+    from{color: red;}
+    10%{color: rgb(255, 102, 0);}
+    30%{color: rgb(252, 248, 32);}
+    50%{color: rgb(155, 255, 88);}
+    70%{color: rgb(74, 255, 240);}
+    90%{color: blue;}
+    to{color: rgb(209, 5, 209);}
+}
+
+.item_head{
+    height: 900px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px;
+    border-image: none;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+}
+
+.Information {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 150px;
+    width: 70%;
+}
+
+.row{
+    display: block;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+#img_row{ width: 50%;}
+
+.item_img { margin: 0;}
+
+.item_img > img{ 
+    vertical-align: middle;
+    box-shadow:  0px 0px 8px rgb(112, 112, 112);
+}
+
+#Product_name{
+    padding: 0 !important;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 35px;
+    letter-spacing: -1px;
+}
+
+#sub_inform{
+    color: rgb(56, 56, 56);
+    margin-top: 0.8rem;
+    margin-bottom: 1rem;
+    font-size: 12px;
+    font-weight: 100;
+}
+table{
+    display: table;
+}
+
+.inform_table{
+    font-size: 12px;
+    color: rgb(155, 154, 154);
+    margin-bottom: 20px;
+    background-color: transparent;
+}
+
+.inform_table th{
+    text-align: left;
+    vertical-align: middle;
+    width: 35%;
+    /* border: 1px solid green; */
+}
+
+.inform_table td{
+    color: grey;
+    vertical-align: middle;
+}
+
+.inform_table tr{
+    display: table-row;
+    vertical-align: inherit;
+    vertical-align: middle;
+    height: 3rem;
+    border-bottom: 0.5px solid #eee;    
+}
+
+.inform_table #score > td{
+    color: rgb(193, 234, 253);
+    font-size: 20px;
+    text-shadow: 0px 0px 5px rgb(178, 231, 252);
+}
+
+.Main_inform{
+    float: right;
+    width: 40%;
+}
+#select_count{
+    width: 28rem; /*440px*/
+    height: 70px;
+    float: right;
+    border: 4px solid rgb(228, 228, 228);
+}
+
+#sc_text{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    width: 200px;
+    float: left;
+    color: black;
+    font-weight: 400;
+    font-size: 14px;
+}
+#input_count{
+    float: right;
+    margin-top: -1.7rem;
+    margin-right: 1rem;
+}
+#select_count input[type=text]{
+    border: 1px solid rgb(206, 206, 206);
+    margin-left: 200px;
+    width: 100px;
+}
+
+#Price_ele{
+    padding-top: 1rem;
+    margin-top: 4rem;
+}
+
+#Price_ele > div{
+    font-size: 25px;
+    font-weight: 100;
+    color: grey;
+}
+
+#buttons{
+    width: 500px;   
+    margin-top: 2.8rem;
+}
+
+#buttons > #buy{
+    text-decoration: none;
+    /* padding-left: 4.2rem;
+    padding-right: 4.2rem; */
+    padding: 0.5rem 4.2rem 0.5rem 4.2rem;
+    color: black;
+    background-color: rgb(233, 233, 233);
+
+}
+
+#buttons > #buy:hover{
+    box-shadow: 0px 0px 5px grey;
+}
+
+#buttons > #kart{
+    text-decoration: none;
+    padding: 0.5rem 4.2rem 0.5rem 4.2rem;
+    margin-left: 2.4rem;
+    color: black;
+    background-color: rgb(233, 233, 233);
+}
+
+#buttons > #kart:hover{
+    box-shadow: 0px 0px 5px grey;
+}
+@media (min-width: 768px) {
+    #img_row {float: left; }
+}

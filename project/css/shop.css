@@ -1,0 +1,176 @@
+#Shop_wrapper{
+	/* border: 1px solid blue; */
+	margin: 2rem auto;
+    max-width: 1260px;
+	position: relative;
+	height: 1500px;
+}
+
+#Best_Products{
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	font-size: 26px;
+	margin-top: 8rem;
+	margin-bottom: 2rem;
+	font-weight: 600;
+	letter-spacing: 5px;
+}
+#Title > img{
+	margin: 3rem auto;
+	width: 100%;
+}
+
+.Shop_item{
+	/* border: 1px solid blue; */
+	height: 500px;
+	width: 1200px;
+}
+
+#Shop_Itemsec1, #Shop_Itemsec2, #Shop_Itemsec3, #Shop_Itemsec4, #Shop_Itemsec5, #Shop_Itemsec6, #Shop_Itemsec7, #Shop_Itemsec8{
+	width: 290px;
+	display: block;
+
+	margin: 0rem auto 3rem;
+	box-shadow: 0px 0px 20px rgb(223, 223, 223);
+}
+
+#Shop_Itemsec1:hover, #Shop_Itemsec2:hover, #Shop_Itemsec3:hover, #Shop_Itemsec4:hover,
+#Shop_Itemsec5:hover, #Shop_Itemsec6:hover, #Shop_Itemsec7:hover, #Shop_Itemsec8:hover{
+	/* animation-name: focus;
+	animation-duration: 0.5s; */
+	margin-top: -2rem;
+	margin-bottom: 5rem;
+}
+
+.Shop_ItemBox{
+	margin-top: 6rem;
+	width: 100%;
+}
+
+#Shop_Itemrow1, #Shop_Itemrow2{
+	width: 1260px;
+	display: flex;
+	margin-bottom: 6rem;
+	margin-top: -3.5rem;
+}
+
+#Shop_inform{
+	width: 290px;
+	height: 170px;
+	text-align: center;
+	letter-spacing: 1px;
+	padding: 30px 2rem 2rem 2rem;
+	background-color: white;
+}
+
+#Shop_inform > a{
+	/* font-family: "Noto Sans KR", sans-serif; */
+	font-family: 'Nanum Gothic', sans-serif;
+    text-decoration: none;
+	color: black;
+    font-weight: 400;
+	font-size: 14px;
+    line-height: 1.2rem;
+}
+
+#Shop_inform > a:hover{
+    color: blue;
+}
+
+#Shop_inform > div{
+	font-family: 'Roboto Condensed', sans-serif;
+    display: block;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    line-height: 4px;
+    font-weight: 100;
+}
+
+#Varmilo_keyboard{
+    color: #a5a4a4;
+	padding-top: 2rem;
+	text-align: center;
+	font-weight: 100;
+}
+
+#Varmilo_price{
+    padding-top: 1rem;
+    margin-right: 0.5rem;
+	color: black;
+	text-align: center;
+}
+
+#Button_box{
+	width: 90%;
+	margin: -2rem auto;
+	margin-bottom: 2rem;
+	/* border: 1px solid green; */
+}
+
+#Shop_button1, #Shop_button2{
+	font-family: "Roboto","Nanum Gothic",sans-serif;
+	font-size: 13px;
+	text-decoration: none;
+	color: black;
+	border: 1px solid rgb(175, 175, 175);
+	text-align: center;
+}
+
+#Shop_button1{
+	padding: 0.6rem 4rem 0.6rem 4rem;
+	margin-left: 20.9rem;
+}
+
+#Shop_button2{
+	padding: 0.7rem 4.5rem 0.7rem 4.5rem;
+	margin-left: 5rem;
+}
+
+#Shop_button1:hover, #Shop_button2:hover{
+	animation-name: borderLight;
+	animation-duration: 0.5s;
+	border: 1px solid black;
+}
+
+#div_hr{
+	width: 1100px;
+	border: 0.5px solid rgb(204, 204, 204);
+	margin: 5rem auto;
+}
+#product_hr{
+	width: 1100px;
+	border: 0.5px solid rgb(204, 204, 204);
+	margin: 0 auto;
+}
+@keyframes focus{
+	from{margin-top: 0rem;
+		margin-bottom: 5rem;}
+	to{margin-top: -2rem;
+		margin-bottom: 5rem;}
+}
+
+@keyframes borderLight{
+	from{border: 1px solid rgb(175, 175, 175);}
+	to{border: 1px solid black;}
+}
+
+.Shop_ItemBox{
+	animation-name: fade;
+	animation-duration: 0.5s;
+}
+
+.fade_title{
+	animation-name: down;
+	animation-duration: 2s;
+}
+@keyframes fade{
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@keyframes down{
+	from{margin-top: -5rem;
+		opacity: 0;}
+	to{margin-top: 0;
+		opacity: 1;}
+}
