@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>온라인 명품 편집샵, 엘레강스 원</title>
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/reset2.css">
+	<link rel="stylesheet" href="../css/Varmilo.css">
+	<link rel="stylesheet" href="../css/shop.css">
+	<link rel="stylesheet" href="../css/custom.css">
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nanum+Gothic:400,700,800&display=swap&subset=korean"
+		rel="stylesheet">
+	<!--font-family: 'Nanum Gothic', sans-serif;-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
+	<!--font-family: 'Roboto', sans-serif;-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap" rel="stylesheet">
+	<!--font-family: 'Roboto Condensed', sans-serif;-->
+	<script>
+		/*메뉴바 열고닫는 스크립트*/
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+		}
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+	</script>
+
+</head>
+
+<body class="body">
+	<div class="div_block">
+		<header id="header">
+			<a class="logo" href="../mainpage.html">eLegance 1</a>
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" id="align-x" onclick="closeNav()">&times</a>
+				<a href="../html/Outer.html">Outer</a>
+				<a href="../html/Top.html">Top</a>
+				<a href="../html/Bottom.html">Bottom</a>
+				<a href="../html/One-piece.html">One-piece</a>
+				<a href="../html/Shoes.html">Shoes</a>
+				<a href="../html/Acc.html">Acc</a>
+                <a href="../html/Custom.html">Custom</a>
+			</div>
+			<div id="select-menu" class="logo" onclick="location.href='../html/login.html'";>Log In</div>
+			<div id="select-menu" class="logo" onclick="openNav()">MENU</div>
+		</header>
+	</div>
+
+	<section id="custom_banner">
+		<div>
+			<img src="../image/custom_logo/custom_body.jpg" width="100%">
+		</div>
+	</section>
+
+	<section id = "custom_body">
+			<hr>
+			<div>
+				<img src="../image/custom_logo/custom_body1.jpg" width="100%">
+			</div>
+			<hr>
+	</section>
+
+	<section id="custom_wrapper">
+		<div id="draw">Draw a Logo yourself</div>
+		<div id="sub_draw">자신만의 로고를 직접 그려보세요</div>
+		<div id = "input_box">
+			<input type="image" id = "canvas_button" src="../image/canvasbutton/new.jpg" width="90px" onclick="erase()"></input>
+			|
+			<input type="image" id = "canvas_button" src="../image/canvasbutton/black.jpg" width = "34px" onclick="black()"></input>
+			<input type="image" id = "canvas_button" src="../image/canvasbutton/red.jpg" width = "35px" onclick="red()"></input>
+			<input type="image" id = "canvas_button" src="../image/canvasbutton/blue.jpg" width = "35px" onclick="blue()"></input>
+			<input type="image" id = "canvas_button" src="../image/canvasbutton/green.jpg" width = "35px" onclick="green()"></input>
+			<input type="image" id = "canvas_button" src="../image/canvasbutton/yellow.jpg" width = "35px" onclick="yellow()"></input>
+		   </div>
+		   
+
+		<div id="custom_canvas">
+			<canvas id="myCanvas" width="800" height="300"></canvas>
+			<hr>
+			<script>
+				var canvas, context;
+
+				function init() {
+					canvas = document.getElementById("myCanvas");
+					context = canvas.getContext("2d");
+					
+					context.lineWidth = 2;
+					context.strokeStyle = "blue";
+
+					canvas.addEventListener("mousemove", function (e) { move(e) }, false);
+					canvas.addEventListener("mousedown", function (e) { down(e) }, false);
+					canvas.addEventListener("mouseup", function (e) { up(e) }, false);
+					canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+				}
+
+				var startX = 0, startY = 0;
+				var dragging = false;
+				function draw(curX, curY) {
+					context.beginPath();
+					context.moveTo(startX, startY);
+					context.lineTo(curX, curY);
+					context.stroke();
+				}
+
+				function down(e) {
+					startX = e.offsetX;
+					startY = e.offsetY;
+					dragging = true;
+				}
+				function up(e) { dragging = false; }
+				function move(e) {
+					if (!dragging) return;
+					var curX = e.offsetX, curY = e.offsetY;
+					draw(curX, curY);
+					startX = curX; startY = curY;
+				}
+				function out(e) { dragging = false; }
+
+				var black = function () {
+					context.strokeStyle = '#000000';
+				}
+				var red = function () {
+					context.strokeStyle = '#ff0000';
+				}
+				var green = function () {
+					context.strokeStyle = '#00ff00';
+				}
+				var blue = function () {
+					context.strokeStyle = '#0000ff';
+				}
+				var yellow = function () {
+					context.strokeStyle = '#ffff00';
+				}
+				var erase = function () {
+					context.clearRect(0, 0, canvas.width, canvas.height);
+				}	
+			</script>
+		</div>
+	</section>
+    <footer>
+        <div id = "footer_inform">
+            <div id = "inform_frame">
+                <div id = "site_inform">㈜eLegance_1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 대표전화 : 010-5416-7732 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 비즈니스 프로그래밍</div>
+            </div>
+        </div>
+        <div id = "myinform_frame">
+            <div id = "myinform">학과 &nbsp;:&nbsp; 경영정보학 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주소 : 부산광역시 부산진구 동의대학교 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 이메일 : eLegance1@naver.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+
+            </div>
+            <div id = "myinform">
+                    전화 : 010-5416-7732 (상담시간 오전 09시 ~ 오후 18시)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    전화상담 휴무일 : 토,일 및 공휴일
+                </div>
+            <div id = "myinform">
+                <span>eLegance1 공식 홈페이지</span> : ⓒ eLegance1.co.kr
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

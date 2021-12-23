@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>온라인 명품 편집샵, 엘레강스 원</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/reset2.css">
+    <link rel="stylesheet" href="../css/elegance.css">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&display=swap&subset=korean"
+        rel="stylesheet">
+    <script>
+        /*메뉴바 열고닫는 스크립트*/
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
+</head>
+
+<body class="body">
+    <div class="div_block">
+        <header id="header">
+            <a class="logo" href="../mainpage.html">eLegance 1</a>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" id="align-x" onclick="closeNav()">&times</a>
+				<a href="../html/Outer.html">Outer</a>
+				<a href="../html/Top.html">Top</a>
+				<a href="../html/Bottom.html">Bottom</a>
+				<a href="../html/One-piece.html">One-piece</a>
+				<a href="../html/Shoes.html">Shoes</a>
+				<a href="../html/Acc.html">Acc</a>
+                <a href="../html/Custom.html">Custom</a>
+            </div>
+            <div id="select-menu" class="logo" onclick="openNav()">MENU</div>
+        </header>
+    </div>
+
+    <section class="Page_title">
+        <div id="Page_wrapper">
+            <div class="contents">
+                <div id="ele_text">Diorchan</div>
+            </div>
+            <hr>
+        </div>
+    </section>
+
+    <section class="Page_main">
+        <div class="item_head">
+            <div class="row">
+                <div id="img_row">
+                    <div class="item_img">
+                        <img src="../image/product/Bottom/Bottom(4).jpg" width="78%">
+                    </div>
+                </div>
+
+                <div class="Main_inform">
+                    <h1 id="Product_name">디올챙이 OBLIQUE 슬림 핏 진</h1>
+                    <div id="sub_inform">블루 로우 코튼 데님, 뉴 레귤러 기장</div>
+                    <hr>
+                    <table class="inform_table">
+                        <tbody>
+                            <tr id="score">
+                                <th>고객평점</th>
+                                <td>★★★★★</td>
+                            </tr>
+
+                            <tr>
+                                <th>판매가격</th>
+                                <td>1,100,000원</td>
+                            </tr>
+
+                            <tr>
+                                <th>포인트</th>
+                                <td>0점</td>
+                            </tr>
+
+                            <tr>
+                                <th>배송비</th>
+                                <td>주문시 결제(10만원 이상 무료배송)</td>
+                            </tr>
+
+                            <tr>
+                                <th>A/S 보증기간</th>
+                                <td>
+                                    구입 후 1년 : 무상<br>
+                                    구입 후 1년 이상, 소비자 과실의 파손 : 유상<br>
+
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                    <div id="select_count">
+                        <div id="sc_text">디올챙이 OBLIQUE 슬림 핏 진</div>
+                        <div id="input_count">
+                            <input type="text" id="counter" value="1">
+                            <button type="button" id="increase_button">+</button>
+                            <button type="button" id="decrease_button">-</button>
+                            <script>
+                                var inc = document.getElementById("increase_button");
+                                var dec = document.getElementById("decrease_button");
+
+                                inc.addEventListener("click", increase, false); // 버블 리스너 등록
+                                dec.addEventListener("click", decrease, false); // 버블 리스너 등록
+
+                                function decrease() {
+                                    var x = document.getElementById("counter");
+                                    x.value = parseInt(x.value) - 1;
+                                    if(x.value < 1){
+                                        x.value = 1;
+                                        alert("최소 구매수량은 1개입니다.");
+                                    } 
+                                    priceSum();
+                                }
+                                function increase(){
+                                    var x = document.getElementById("counter");
+                                    x.value = parseInt(x.value) + 1;
+                                    if(x.value >= 5){
+                                        x.value = 5;
+                                        alert("재고보다 많은 수량을 구매 할 수 없습니다.");
+                                    }
+                                    priceSum();
+                                }
+                            </script>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="Price_ele">
+                        <div>총 금액 : <span id="output">1100000</span> 원</div>
+
+                        <script>
+                            function priceSum(){
+                            var product_cnt = document.getElementById("counter");
+                            var output = document.getElementById("output");
+                            var price = parseInt(product_cnt.value) * 2900000;
+                            
+                            output.innerHTML = price;
+                            }
+                        </script>
+                    </div>
+                    <div id="buttons">
+                        <a href="#" id="buy" onclick="buy_alert()">바로구매</a>
+                        <a href="#" id="kart" onclick="myKart()">장바구니</a>
+                        <script>
+                            function buy_alert(){
+                                var buy = confirm("구매하시겠습니까?");
+
+                                if(buy) alert("구매가 완료되었습니다.");
+                                else alert("구매가 취소되었습니다.");
+                            }
+
+                            function myKart(){
+                                var kart = confirm("장바구니에 추가하시겠습니까?");
+
+                                if(kart) alert("장바구니에 추가되었습니다.");
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="Information">
+        <section id="Product_title">
+            <div>
+                <h1>내부의 Dior Oblique 모티브가 돋보이는 로우 코튼 데님 소재의 슬림 핏 진입니다. <br>
+                    클래식한 5포켓 디자인으로 뒷면 포켓의 홀마크 Dior 스티칭과 디올 하우스 시그니처 디보싱을 장식한 가죽 태그가 특징입니다. <br>
+                    롤업 스타일로 연출하기 좋으며, 블루종과 세트로 매치할 수 있습니다.
+                </h1>
+            </div>
+    
+        </section>
+        <div id="Inform_image">
+            <img src="../image/product/Bottom/bottom4-1.PNG" width="100%">
+            <img src="../image/product/Bottom/bottom4-2.webp" width="100%">
+            <img src="../image/product/Bottom/bottom4-3.jpg" width="100%">
+        </div>
+    </section>
+    <footer>
+        <div id = "footer_inform">
+            <div id = "inform_frame">
+                <div id = "site_inform">㈜eLegance_1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 대표전화 : 010-5416-7732 
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 비즈니스 프로그래밍</div>
+            </div>
+        </div>
+        <div id = "myinform_frame">
+            <div id = "myinform">학과 &nbsp;:&nbsp; 경영정보학 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주소 : 부산광역시 부산진구 동의대학교 
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 이메일 : eLegance1@naver.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+
+            </div>
+            <div id = "myinform">
+                    전화 : 010-5416-7732 (상담시간 오전 09시 ~ 오후 18시)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    전화상담 휴무일 : 토,일 및 공휴일
+                </div>
+            <div id = "myinform">
+                <span>eLegance1 공식 홈페이지</span> : ⓒ eLegance1.co.kr
+            </div>
+        </div>
+    </footer>
+
+</div>
+</body>
+
+</html>
